@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <style>
+            .tab-prueba {
+                align-items: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                justify-content: center;
+                table-layout: fixed;
+                text-align: center;
+                width: 100%;
+            }
+
+            .tab-prueba th, td {
+                overflow: hidden;
+                padding: 10px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .tab-prueba tbody tr:nth-last-child(odd) {
+                background-color: rgb(227, 245, 220);
+            }
+        </style>
+    </head>
+    <body>
+        <table class="tab-prueba">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Puesto</th>
+                    <th>Minutos</th>
+                    <th>Observaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00700</td>
+                    <td>Jesús Antonio Sierra de la Rosa</td>
+                    <td>78.90</td>
+                    <td>345</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>00700</td>
+                    <td>Jesús Antonio Sierra de la Rosa</td>
+                    <td>78.90</td>
+                    <td>345</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>00700</td>
+                    <td>Jesús Antonio Sierra de la Rosa</td>
+                    <td>78.90</td>
+                    <td>345</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>00700</td>
+                    <td>Jesús Antonio Sierra de la Rosa</td>
+                    <td>78.90</td>
+                    <td>345</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>00700</td>
+                    <td>Jesús Antonio Sierra de la Rosa</td>
+                    <td>78.90</td>
+                    <td>345</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            const tab_prueba = document.getElementsByClassName("tab-prueba")[0];
+            const lst_columnas = tab_prueba.tHead.rows[0].cells;
+            let num_columnas = tab_prueba.tHead.rows[0].cells.length;
+            let wdt_columnas = 100/num_columnas;
+
+            for (const columna of lst_columnas) {
+                columna.style.width = wdt_columnas + "%";
+            }
+        </script>
+    </body>
+</html>
